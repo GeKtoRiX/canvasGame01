@@ -1,4 +1,53 @@
 body {
   margin: 0;
   background-color: #000000;
+  position: relative;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.score {
+  display: inline-block;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  color: limegreen;
+  font-size: 50px;
+}
+
+.menu {
+  display: inline-block;
+  width: 15%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.bg-white {
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #fff;
+  opacity: 0.95;
+}
+
+.gameOn{
+    width: 90%;
+    height: 30px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #1b83e4;
+    color: white;
+    font-size: 15px;
+}
+.gameOn:hover{
+    background-color: goldenrod;
 }

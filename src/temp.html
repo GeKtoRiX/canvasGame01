@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
-
   <body>
+    <div class="score"><span>Score: </span><span id="scoreEl">0</span></div>
+    <div class="menu">
+      <div class="bg-white">
+        <h1 class="finalScore">0</h1>
+        <p>Points</p>
+        <div><button class="gameOn" >Start game</button></div>
+      </div>
+    </div>
     <canvas id="canvas"></canvas>
   </body>
 </html>

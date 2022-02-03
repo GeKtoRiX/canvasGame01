@@ -6,8 +6,8 @@ module.exports = {
     mode: 'development',
     entry: {
         //  Исходный файл трансляции кода es6,es7 и так далее.
-        main: path.resolve('src/canvas.js'),
-        utils: path.resolve('src/utils.js')
+        canvas: path.resolve(__dirname, 'src/canvas.js'), // src/canvas.js
+        utils: path.resolve(__dirname, 'src/utils.js') // src/utils.js
     },
     // Конечный файл трансляции кода в es5.
     output: {
@@ -22,7 +22,6 @@ module.exports = {
     devtool: 'inline-source-map',
     // Настройки сервера.
     devServer: {
-        // Путь создание сервера.
         static: path.resolve(__dirname, 'dist'),
         // Порт подключения.
         port: 8080,
@@ -35,7 +34,7 @@ module.exports = {
         // Настройки трансляции.
         rules: [
             // Использование модулей для css и style элементов.
-            { test: /\.(sa|sc|c)ss$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
+            { test: /\.(sa|sc|c)ss$/, use: ['style-loader', 'css-loader','sass-loader'] },
             // Использование встроенного загрузчика файлов.
             { test: /\.(svg|ico|png|webp|jpg|gif|jpeg)$/, type: 'asset/resource' },
             // Трансляция es5-6 в нативный код и исключение из проверки папку node_modules.
